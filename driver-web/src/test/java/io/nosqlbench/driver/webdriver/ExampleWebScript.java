@@ -20,7 +20,6 @@ public class ExampleWebScript {
     @Test
     @Disabled
     public void getDocsSiteChromeDriver() {
-        System.setProperty("webdriver.http.factory", "okhttp");
         WebDriver driver = new ChromeDriver();
         Perf perf = new Perf("chrome");
         int ops = 100;
@@ -41,7 +40,6 @@ public class ExampleWebScript {
     @Test
     @Disabled
     public void getDocSiteWebHtml() {
-//        System.setProperty("webdriver.http.factory", "okhttp");
         WebDriver driver = new HtmlUnitDriver(false);
         Perf perf = new Perf("htmlunit");
         int ops = 100;

@@ -204,7 +204,6 @@ public class WebDriverActivity extends SimpleActivity {
             WebContext context = contexts.get(slot);
             if (context == null) {
                 logger.info("initializing chromedriver for thread " + slot);
-                System.setProperty("webdriver.http.factory", "okhttp");
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.setHeadless(activityDef.getParams().getOptionalBoolean("headless").orElse(false));
                 WebDriver webdriver = new ChromeDriver(chromeOptions);

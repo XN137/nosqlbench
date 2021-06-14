@@ -1,8 +1,11 @@
 package io.nosqlbench.driver.webdriver;
 
-import org.openqa.selenium.*;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -53,7 +56,6 @@ public class WebContext {
     public void setCookies(Collection<Cookie> cookies) {
         this.cookies.clear();
         this.cookies.addAll(cookies);
-
     }
 
     public void setAlert(Alert alert) {
