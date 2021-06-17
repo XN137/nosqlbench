@@ -372,6 +372,7 @@ public class Scenario implements Callable<ScenarioResult> {
 
     private void doReportSummaries(String reportSummaryTo, ScenarioResult result) {
         List<PrintStream> fullChannels = new ArrayList<>();
+        @SuppressWarnings("ModifiedButNotUsed")
         List<PrintStream> briefChannels = new ArrayList<>();
 
 

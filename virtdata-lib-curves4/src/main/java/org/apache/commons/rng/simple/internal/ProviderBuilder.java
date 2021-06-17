@@ -335,6 +335,7 @@ public final class ProviderBuilder {
         /** Source type. */
         private final Class<? extends UniformRandomProvider> rng;
         /** Data needed to build the generator. */
+        @SuppressWarnings("ImmutableEnumChecker")
         private final Class<?>[] args;
 
         /**

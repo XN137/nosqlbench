@@ -25,6 +25,7 @@ public class Cmd {
         waitMillis(Arg.of("millis_to_wait", Long::parseLong)),
         fragment(Arg.ofFreeform("script_fragment")),;
 
+        @SuppressWarnings("ImmutableEnumChecker")
         private final Arg<?>[] positional;
 
         CmdType(Arg<?>... positional) {

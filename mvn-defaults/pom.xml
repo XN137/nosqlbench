@@ -29,6 +29,7 @@
     <joda.time.version>2.9.9</joda.time.version>
     <junit.jupiter.version>5.7.2</junit.jupiter.version>
 
+    <lombok.version>1.18.20</lombok.version>
     <lz4.version>1.4.1</lz4.version>
 <!--    <metrics.version>4.0.7</metrics.version>-->
     <mvel2.version>2.4.10.Final</mvel2.version>
@@ -387,6 +388,23 @@
             <!--                    </compilerArgs>-->
             <!--<compilerArgument>-Xdoclint:all</compilerArgument>-->
             <!--                    <compilerArgument>-Xlint:all</compilerArgument>-->
+            <encoding>UTF-8</encoding>
+            <compilerArgs>
+              <arg>-XDcompilePolicy=simple</arg>
+              <arg>-Xplugin:ErrorProne -Xep:IdentityBinaryExpression:OFF -Xep:ReturnValueIgnored:WARN -Xep:ModifiedButNotUsed:ERROR -Xep:StreamResourceLeak:ERROR -Xep:ImmutableEnumChecker:ERROR -Xep:MissingOverride:OFF</arg>
+            </compilerArgs>
+            <annotationProcessorPaths>
+              <path>
+                <groupId>com.google.errorprone</groupId>
+                <artifactId>error_prone_core</artifactId>
+                <version>2.7.1</version>
+              </path>
+              <path>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+              </path>
+            </annotationProcessorPaths>
         </configuration>
       </plugin>
 

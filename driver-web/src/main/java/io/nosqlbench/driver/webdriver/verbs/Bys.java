@@ -12,6 +12,7 @@ public enum Bys {
     xpath(By::xpath),
     classname(By::className);
 
+    @SuppressWarnings("ImmutableEnumChecker")
     private Function<String, By> initializer;
 
     Bys(Function<String,By> initializer) {

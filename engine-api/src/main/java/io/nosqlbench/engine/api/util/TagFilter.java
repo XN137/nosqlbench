@@ -102,6 +102,7 @@ public class TagFilter {
         all((i,j) -> (i.intValue()==j.intValue())),
         none((i,j) -> (j ==0));
 
+        @SuppressWarnings("ImmutableEnumChecker")
         private final BiFunction<Integer, Integer, Boolean> matchfunc;
 
         Conjugate(BiFunction<Integer,Integer,Boolean> matchfunc) {

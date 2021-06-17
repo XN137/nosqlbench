@@ -96,6 +96,7 @@ public class WebDriverVerbs {
         ;
 
         private final Class<? extends WebDriverVerb> verbClass;
+        @SuppressWarnings("ImmutableEnumChecker")
         private final Function<Map<String, String>, WebDriverVerb> initializer;
 
         Verb(Class<? extends WebDriverVerb> verbClass, Function<Map<String, String>, WebDriverVerb> initializer) {

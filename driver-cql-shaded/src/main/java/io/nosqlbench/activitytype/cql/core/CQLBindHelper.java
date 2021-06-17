@@ -130,6 +130,7 @@ public class CQLBindHelper {
     }
 
     public static Map<String, String> parseAndGetSpecificBindings(OpDef opDef, ParsedStmt parsed) {
+        @SuppressWarnings("ModifiedButNotUsed")
         List<String> spans = new ArrayList<>();
 
         String statement = opDef.getStmt();
